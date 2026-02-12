@@ -1,0 +1,29 @@
+# GitHub Actions CI для telegram-bot-server
+# Назначение: Flask API webhook + Celery pipeline + mT5 inference + integrations with Postgres/Redis/MinIO + PII detector
+# Основной язык: unknown (специфичная конфигурация недоступна)
+
+name: CI — telegram-bot-server
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Info
+        run: |
+          echo "Репозиторий: telegram-bot-server"
+          echo "Основной язык: unknown"
+          echo "Специфичная CI-конфигурация для этого языка отсутствует"
+          echo "Требуется ручная настройка CI"
